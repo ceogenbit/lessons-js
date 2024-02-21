@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+  </head>
+  <body style="font-size: 26px">
+    <h1>Task 6</h1>
+    <p>
+      Задача 6. З клавіатури вводяться вартість товару та кількість одиниць 3
+      товарів. Обчислити вартість кожного товару окремо та загальну вартість.
+      Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <script>
+      let costOne = parseInt(prompt("Введіть вартість червоної ікри"))
+      let quantityOne = parseInt(
+        prompt("Введіть кількість одиниць червоної ікри")
+      )
+      let costTwo = parseInt(prompt("Введіть вартість батончика Snikers"))
+      let quantityTwo = parseInt(
+        prompt("Введіть кількість одиниць батончиків Snikers")
+      )
+      let costThree = parseInt(prompt("Введіть вартість CocaCola"))
+      let quantityThree = parseInt(prompt("Введіть кількість одиниць CocaCola"))
+
+      let sumOne = costOne * quantityOne
+      let sumTwo = costTwo * quantityTwo
+      let sumTree = costThree * quantityThree
+      let sumTotal = sumOne + sumTwo + sumTree
+      document.write(`
+        <div style='border: 2px solid #000; display: inline-block; padding: 20px;'>
+          <h3>Чек</h3>
+          <ol>
+            <li>Червоної ікра..........................(${quantityOne}x) ${costOne} грн</li>
+            <li>Батончик Snikers..........................(${quantityTwo}x) ${costTwo} грн</li>
+            <li>Червоної ікра..........................(${quantityThree}x) ${costThree} грн</li>
+          </ol>
+          <strong>Загальна сума: ${sumTotal} грн</strong>
+        </div>
+      `)
+    </script>
+  </body>
+</html>
