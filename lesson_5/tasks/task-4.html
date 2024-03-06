@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="tasks.css" rel="stylesheet" />
+    <title>Задача 4</title>
+  </head>
+  <body>
+    <p>Задача 4. Вивести таблицю з 3 рядків і 7 стовпців</p>
+    <script>
+      document.write('<table border="2px">')
+      for (let row = 1; row <= 3; row++) {
+        document.write("<tr>")
+        for (let columnNum = 1; columnNum <= 7; columnNum++) {
+          document.write(`<td style='padding: 5px;'>${columnNum}</td>`)
+        }
+        document.write("</tr>")
+      }
+      document.write("</table>")
+    </script>
+  </body>
+</html>

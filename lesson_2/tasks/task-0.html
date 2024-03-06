@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body style="font-size: 26px">
+    <h1>Task 0</h1>
+    <p>
+      Задача 0. Обчислити значення виразів <br />
+      S1=a+12+b <br />
+      S2=a+b2a <br />
+      S3=3(a+b)c <br />
+      S4=sin⁡(a-b)
+    </p>
+    <script>
+      let a = parseInt(prompt("Введіть значення а"))
+      let b = parseInt(prompt("Введіть значення b"))
+      let c = parseInt(prompt("Введіть значення c"))
+      let num = 12
+
+      // 1
+      let resultOne = a + num + b
+
+      // 2
+      let resultTwo = Math.sqrt((a + b) / (2 * a))
+
+      // 3
+      let resultThree = Math.cbrt((a + b) * c)
+
+      // 4
+      let resultFour = Math.sin(a / -b)
+
+      document.write(`
+        <ol>
+          <li>Результат обчислення  виразу №1: ${resultOne}</li>  
+          <li>Результат обчислення  виразу №2: ${resultTwo}</li> 
+          <li>Результат обчислення  виразу №3: ${resultThree}</li>
+          <li>Результат обчислення  виразу №4: ${resultFour}</li>
+        </ol>
+      `)
+    </script>
+  </body>
+</html>
