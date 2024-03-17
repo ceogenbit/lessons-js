@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="tasks.css" rel="stylesheet" />
+    <title>Задача 5</title>
+    <style>
+      table,
+      td {
+        border: 2px solid;
+      }
+      td {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Задача 5. Вивести таблицю
+      <img
+        style="vertical-align: middle"
+        width="50"
+        src="../task-5.webp"
+        alt="Task 5"
+      />
+    </p>
+    <script>
+      document.write("<table>")
+      let number = 1
+      for (let row = 1; row <= 3; row++) {
+        document.write("<tr>")
+        for (let step = 1; step <= 3; step++) {
+          document.write("<td>")
+          document.write(`${number}`)
+          document.write("</td>")
+          number++
+        }
+        document.write("</tr>")
+      }
+      document.write("</table>")
+    </script>
+  </body>
+</html>

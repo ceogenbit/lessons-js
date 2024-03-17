@@ -1,0 +1,136 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+    min-height: 100vh;
+    min-width: 320px;
+}
+a {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+body {
+    font-family: "Amaranth", sans-serif;
+    color: #fff;
+    margin: 0;
+    background: url('../images/lesson-background.webp') center / cover no-repeat;
+}
+body::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper main {
+    flex: 1 1 auto;
+}
+.container {
+    padding: 0 15px;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header .container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 10px;
+    align-items: center;
+}
+.header .container > * {
+    flex: 1 1 auto;
+}
+.header__link {
+    font-size: 20px;
+    padding: 10px 15px;
+    justify-self: flex-start;
+    margin-right: auto;
+    background-color: rgba(5, 39, 49, 0.9);
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+.header--position {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.header__title {
+    color: #ffed4f
+}
+.header__name {
+    color: #ddd;
+    font-size: 22px;
+}
+
+.page__title {
+    font-size: 48px;
+    text-align: center;
+}
+.page__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.page__item {
+    display: flex;
+    flex: 1 1 410px;
+    background-color: rgba(5, 39, 49, 0.9);
+}
+.page__link {
+    flex: 1 1 auto;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+.page__link > * {
+    position: relative;
+}
+.page__link::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #211f68;
+    transition: top 0.5s;
+}
+.page__link h2 {
+    font-weight: 700;
+    font-size: 32px;
+}
+@media (any-hover:hover){
+    .header__link:hover {
+        background-color: #211f68;
+    } 
+    .page__link:hover::before {
+        top: 0;
+    }    
+}
+@media (max-width: 767.98px){
+    .header__title {
+        font-size: 26px; 
+    }
+}

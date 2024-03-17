@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="tasks.css" rel="stylesheet" />
+    <title>Задача 3</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Задача 3. Створити окремі функції, які для 4 чисел знаходять: 1.суму;
+      2.добуток; 3.середнє арифметичне; 4.мінімальне значення.
+    </h1>
+    <script>
+      function getSumNumbers(num1, num2, num3, num4) {
+        return num1 + num2 + num3 + num4
+      }
+      function getMultiplyingNumbers(num1, num2, num3, num4) {
+        return num1 * num2 * num3 * num4
+      }
+      function getArithmeticValue(num1, num2, num3, num4) {
+        return (num1 + num2 + num3 + num4) / 4
+      }
+      function getMinValue(num1, num2, num3, num4) {
+        return Math.min(num1, num2, num3, num4)
+      }
+
+      const num1 = parseFloat(prompt('Введіть перше число'))
+      const num2 = parseFloat(prompt('Введіть друге число'))
+      const num3 = parseFloat(prompt('Введіть третє число'))
+      const num4 = parseFloat(prompt('Введіть четверте число'))
+      const sumNumbers = getSumNumbers(num1, num2, num3, num4)
+      const multiplyingNumbers = getMultiplyingNumbers(num1, num2, num3, num4)
+      const arithmeticValue = getArithmeticValue(num1, num2, num3, num4)
+      const minValue = getMinValue(num1, num2, num3, num4)
+      document.write(`
+        <p>
+          Сума чисел: ${sumNumbers}<br>
+          Добуток чисел: ${multiplyingNumbers}<br>
+          Середнє арифметичне: ${arithmeticValue}<br>
+          Мінімальне значення: ${minValue}
+        </p>`)
+    </script>
+  </body>
+</html>

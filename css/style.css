@@ -1,0 +1,133 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+    min-height: 100vh;
+    min-width: 320px;
+}
+a {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+body {
+    font-family: "Amaranth", sans-serif;
+    color: #fff;
+    margin: 0;
+    background: url('../images/background.webp') 0 0 / cover no-repeat;
+}
+body::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper main {
+    flex: 1 1 auto;
+}
+.container {
+    padding: 0 15px;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header--position {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.header__title {
+    color: #ffed4f
+}
+.header__name {
+    color: #dddddd;
+}
+.page {
+}
+.page__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.page__item {
+    flex: 1 1 410px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(20, 15, 68, 0.7);
+    min-height: 80px;
+    overflow: hidden;
+}
+.page__link {
+    font-size: 30px;
+    flex: 1 1 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: var(--primary-text);
+    position: relative;
+}
+.page__link::before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    align-self: center;
+    font-size: 17px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #051416;
+    /* border-radius: 20px; */
+    transition: top 0.5s;
+}
+.page__link--lesson-2::before {
+    content: 'Урок №2. Вступ до веб-програмування. Вступ до JS. Лінійні алгоритми.';
+}
+.page__link--lesson-3::before {
+    content: 'Урок №3. Арифметичні і логічні вирази. Реалізація алгоритмів з розгалуженням';
+}
+.page__link--lesson-5::before {
+    content: 'Урок №5. Цикли';
+}
+.page__link--lesson-7::before {
+    content: 'Урок №7. Функції';
+}
+.page__link span {
+    align-self: center;
+}
+.footer {
+}
+/* ============================================================================= */
+@media (any-hover:hover){
+    .page__item a:hover::before {
+        top: 0;
+    }     
+}
+@media (max-width: 767.98px){
+    .header {
+        font-size: 30px;
+    }
+}

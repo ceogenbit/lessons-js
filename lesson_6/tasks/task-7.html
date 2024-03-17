@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="tasks.css" rel="stylesheet" />
+    <title>Задача 5</title>
+  </head>
+  <body>
+    <p>
+      Задача 7. Вивести на екран N абзаців (N вводиться користувачем) за
+      зразком:
+      <img
+        style="vertical-align: middle"
+        width="250"
+        src="../task-7.webp"
+        alt="Task 7"
+      />
+    </p>
+    <script>
+      let titleQuantity = parseInt(prompt("Введіть кількість абзаців", "5"))
+      for (let chapter = 1; chapter <= titleQuantity; chapter++) {
+        document.write(`<h1>Заголовок ${chapter}</h1>`)
+        let paragraphNumber = 0
+        for (let paragraph = 0; paragraph < chapter; paragraph++) {
+          document.write(
+            `<p>Розділ ${chapter}, параграф ${++paragraphNumber}</p>`
+          )
+        }
+      }
+    </script>
+  </body>
+</html>
