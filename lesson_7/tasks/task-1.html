@@ -16,9 +16,9 @@
       Задача 1. Створити функцію, яка за номером місяця повертає його назву.
     </h1>
     <script>
-      function getMonthName(num) {
+      function getMonthName(monthNum) {
         let monthName
-        switch (num) {
+        switch (monthNum) {
           case 1:
             monthName = "січень"
             break
@@ -61,7 +61,7 @@
         }
         return monthName
       }
-      let monthNum = parseInt(prompt("Month number"))
+      let monthNum = parseInt(prompt("Введіть номер місяця"))
       let result = getMonthName(monthNum)
       document.write(`<p>${monthNum}-ий місяць - це ${result}</p>`)
     </script>
