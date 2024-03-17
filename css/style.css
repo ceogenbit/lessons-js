@@ -1,8 +1,8 @@
 :root {
-    --hover: #0a2933;;
+    --hover: #0c2642;
     --primary-text: #fff;
     --accent-text: #ffed4f;
-    --background-item: rgba(5, 39, 49, 0.9);
+    --background-item: rgba(20, 15, 68, 0.7);
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -62,6 +62,7 @@ body::after {
     font-size: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
+    background-color: #0d1214d8
 }
 .header--position {
     position: sticky;
@@ -88,7 +89,7 @@ body::after {
     flex: 1 1 410px;
     display: flex;
     justify-content: center;
-    background-color: rgba(20, 15, 68, 0.7);
+    background-color: var(--background-item);
     min-height: 100px;
     overflow: hidden;
 }
