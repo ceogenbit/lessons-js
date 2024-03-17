@@ -1,11 +1,16 @@
+:root {
+    --hover: #211f68;
+    --primary-text: #fff;
+    --accent-text: #ffed4f;
+    --background-item: rgba(5, 39, 49, 0.9);
+}
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 html,
-body,
-.wrapper {
-    min-height: 100vh;
+body {
+    height: 100%;
     min-width: 320px;
 }
 a {
@@ -20,9 +25,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 body {
     font-family: "Amaranth", sans-serif;
-    color: #fff;
+    color: var(--primary-text);
     margin: 0;
-    /* background: url('../images/lesson-background.webp') center / cover no-repeat; */
 }
 body::before {
     content: '';
@@ -44,6 +48,7 @@ body::after {
     z-index: -1;
 }
 .wrapper {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -60,7 +65,7 @@ body::after {
     font-size: 40px;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: rgba(0, 0, 0, 0.93);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 .header .container {
     display: flex;
@@ -77,8 +82,8 @@ body::after {
     padding: 10px 15px;
     justify-self: flex-start;
     margin-right: auto;
-    background-color: rgba(5, 39, 49, 0.9);
-    color: #fff;
+    background-color: var(--background-item);
+    color: var(--primary-text);
     transition: background-color 0.3s ease-in-out;
 }
 .header--position {
@@ -88,10 +93,9 @@ body::after {
     z-index: 100;
 }
 .header__title {
-    color: #ffed4f
+    color: var(--accent-text)
 }
 .header__name {
-    color: #ddd;
     font-size: 22px;
 }
 
@@ -113,12 +117,12 @@ body::after {
 .page__item {
     display: flex;
     flex: 1 1 410px;
-    background-color: rgba(5, 39, 49, 0.9);
+    background-color: var(--background-item);
 }
 .page__link {
     flex: 1 1 auto;
     padding: 20px;
-    color: #fff;
+    color: var(--primary-text);
     font-size: 18px;
     position: relative;
     overflow: hidden;
@@ -134,7 +138,7 @@ body::after {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #211f68;
+    background-color: var(--hover);
     transition: top 0.5s;
 }
 .page__link h2 {
@@ -146,7 +150,7 @@ body::after {
 }
 @media (any-hover:hover){
     .header__link:hover {
-        background-color: #211f68;
+        background-color: var(--hover);
     } 
     .page__link:hover::before {
         top: 0;

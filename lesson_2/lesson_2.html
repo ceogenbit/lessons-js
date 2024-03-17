@@ -4,71 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson 2</title>
+    <link href="../css/lesson.css" rel="stylesheet">
   </head>
-  <body style="font-size: 24px">
-    <h1>ДЗ №2</h1>
-    <ul>
-      <li>
-        <a href="tasks/task-0.html">Задача №0</a>
-        <p>
-          Задача 0. Обчислити значення виразів <br />
-          S1=a+12+b <br />
-          S2=a+b2a <br />
-          S3=3(a+b)c <br />
-          S4=sin⁡(a-b)
-        </p>
-      </li>
-      <li>
-        <a href="tasks/task-1.html">Задача №1</a>
-        <p>
-          Задача 1. Знайти суму, добуток та частку двох дійсних чисел. Результат
-          вивести у формі таблиці
-        </p>
-      </li>
-      <li>
-        <a href="tasks/task-2.html">Задача №2</a>
-        <p>
-          Задача 2. Дано рік народження (дата: 1 січня) та поточний рік. Знайти
-          кількість років.
-        </p>
-      </li>
-      <li>
-        <a href="tasks/task-3.html">Задача №3</a>
-        <p>
-          Задача 3. Дано вартість одиниці товару і кількість. Знайти загальну
-          вартість та ПДВ (5% від загальної вартості).
-        </p>
-      </li>
-      <li>
-        <a href="tasks/task-4.html">Задача №4</a>
-        <p>
-          Задача 4. Дано довжину у сантиметрах. Визначати скільки це метрів і
-          кілометрів.
-        </p>
-      </li>
-      <li>
-        <a href="tasks/task-5.html">Задача №5</a>
-        <p>
-          Задача 5. Дано кількість секунд, що пройшла від початку доби.
-          Визначити скільки це годин і хвилин.
-        </p>
-      </li>
-      <li>
-        <a href="tasks/task-6.html">Задача №6</a>
-        <p>
-          Задача 6. З клавіатури вводяться вартість товару та кількість одиниць
-          3 товарів. Обчислити вартість кожного товару окремо та загальну
-          вартість. Вивести чек (як у супермаркеті) використовуючи елементи
-          розмітки.
-        </p>
-      </li>
-      <li>
-        <a href="tasks/task-7.html">Задача №7</a>
-        <p>
-          Задача 7. Знайти суму випадкового номера місяця (від 1 до 12) та
-          випадкового номера дня (від 0 до 6).
-        </p>
-      </li>
-    </ul>
+  <body>
+    <div class="wrapper">
+      <header class="header header--position">
+        <div class="container">
+          <a class="header__link" href="../index.html">На головну</a>
+          <span class="header__title">JS Course</span> 
+          <span class="header__name">ceogenbit(Дмитро)</span>
+        </div>
+      </header>
+      <main class="page">
+        <div class="container">
+          <h1 class="page__title">ДЗ №2</h1>
+          <ul class="page__list">
+            <li class="page__item">
+              <a class="page__link page__link--task-0" href="tasks/task-0.html" target="_blank">
+                <h2>Задача №0</h2>
+                <p>Обчислити значення виразів <br/>
+                  S1=a+12+b <br/>
+                  S2=a+b2a <br/>
+                  S3=3(a+b)c <br/>
+                  S4=sin⁡(a-b)</p>
+              </a>
+            </li>
+            <li class="page__item">
+              <a class="page__link page__link--task-1" href="tasks/task-1.html" target="_blank">
+                <h2>Задача №1</h2>
+                <p>Знайти суму, добуток та частку двох дійсних чисел. Результат
+                  вивести у формі таблиці</p>
+              </a>
+            </li>
+            <li class="page__item">
+              <a class="page__link page__link--task-2" href="tasks/task-2.html" target="_blank">
+                <h2>Задача №2</h2>
+                <p>Дано рік народження (дата: 1 січня) та поточний рік. Знайти
+                  кількість років.</p>
+              </a>
+            </li>
+            <li class="page__item">
+              <a class="page__link page__link--task-3" href="tasks/task-3.html" target="_blank">
+                <h2>Задача №3</h2>
+                <p>Дано вартість одиниці товару і кількість. Знайти загальну
+                  вартість та ПДВ (5% від загальної вартості).
+                </p>
+              </a>
+            </li>
+            <li class="page__item">
+              <a class="page__link page__link--task-4" href="tasks/task-4.html" target="_blank">
+                <h2>Задача №4</h2>
+                <p>
+                  Дано довжину у сантиметрах. Визначати скільки це метрів і
+                  кілометрів.
+                </p>
+              </a>
+            </li>
+            <li class="page__item">
+              <a class="page__link page__link--task-5" href="tasks/task-5.html" target="_blank">
+                <h2>Задача №5</h2>
+                <p>
+                  Дано кількість секунд, що пройшла від початку доби.
+                  Визначити скільки це годин і хвилин.
+                </p>
+              </a>
+            </li>
+            <li class="page__item">
+              <a class="page__link page__link--task-6" href="tasks/task-6.html" target="_blank">
+                <h2>Задача №6</h2>
+                <p>
+                  З клавіатури вводяться вартість товару та кількість одиниць
+                  3 товарів. Обчислити вартість кожного товару окремо та загальну
+                  вартість. Вивести чек (як у супермаркеті) використовуючи елементи
+                  розмітки.
+                </p>
+              </a>
+            </li>
+            <li class="page__item">
+              <a class="page__link page__link--task-7" href="tasks/task-7.html" target="_blank">
+                <h2>Задача №7</h2>
+                <p>
+                  Знайти суму випадкового номера місяця (від 1 до 12) та
+                  випадкового номера дня (від 0 до 6).
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
   </body>
 </html>
+
