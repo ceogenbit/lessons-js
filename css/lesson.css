@@ -112,7 +112,7 @@ body::after {
 .page__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
 }
 .page__item {
     display: flex;

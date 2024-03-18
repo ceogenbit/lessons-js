@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 6</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+      table {
+        width: 100%;
+        /* padding: 5px; */
+      }
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+      table, td {
+        border: 2px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Задача 6. Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим фіксованим повідомленням).     
+    </h1>
+    <script>
+      function getTable(num1, num2) {
+        if(num1 > 0 && num2 > 0) {
+          document.write('<table>')
+          for (let c = 0; c < num2; c++) {
+            document.write('<tr>')
+              for (let r = 0; r < num1; r++) {
+                document.write(`<td>${userTableText}</td>`)
+              }
+            document.write('</tr>')
+          }
+          document.write('</table>')
+        } else alert('Кожне значення повинно бути більше нуля')
+      }
+
+      const numOfColumns = parseInt(prompt('Введіть кількість колонок', '6'))
+      const numOfRows = parseInt(prompt('Введіть кількість рядків', '5'))
+      const userTableText = prompt('Введіть текст, який буде містити таблиця', 'Я люблю JS')
+      getTable(numOfColumns, numOfRows)
+    </script>
+  </body>
+</html>

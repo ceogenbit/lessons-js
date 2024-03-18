@@ -83,7 +83,7 @@ body::after {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 15px;
 }
 .page__item {
     flex: 1 1 410px;

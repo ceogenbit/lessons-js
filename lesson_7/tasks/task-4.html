@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="tasks.css" rel="stylesheet" />
     <title>Задача 4</title>
     <style>
       p {
@@ -16,35 +15,26 @@
       Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів:<br> кількість парних,<br> кількість додатних,<br> кількість більших за 100.     
     </h1>
     <script>
-      
-		let evenNumb = 0
-		let positiveNumb = 0
-		let moreHundredNumb = 0
-		function calcFewExamples(num1, num2, num3) {
-			if (num1 % 2 === 0) evenNumb++
-			if (num1 > 0) positiveNumb++
-			if (num1 > 100) moreHundredNumb++
-			if (num2 % 2 === 0) evenNumb++
-			if (num2 > 0) positiveNumb++
-			if (num2 > 100) moreHundredNumb++
-			if (num3 % 2 === 0) evenNumb++
-			if (num3 > 0) positiveNumb++
-			if (num3 > 100) moreHundredNumb++
-		}
-		let num1 = parseFloat(prompt('Введіть число a:'))
-		let num2 = parseFloat(prompt('Введіть число b:'))
-		let num3 = parseFloat(prompt('Введіть число c:'))
+      function comparisonNum() {
+        for (let i = 1; i <= 3; i++) {
+            let num = parseFloat(prompt(`Введіть ${i}-е число`))
+            if (num % 2 === 0) oddNum++;
+            if (num > 0) positiveNum++;
+            if (num > 100) bigNum++;
+        }
+        return oddNum, positiveNum, bigNum;
+      }
 
-		calcFewExamples(num1, num2, num3)
+      let oddNum = 0, bigNum = 0, positiveNum = 0;
+      comparisonNum();
 
-		document.write(`
-		<ul>
-			<li>Парних чисел - ${evenNumb}</li>
-			<li>Додатних чисел - ${positiveNumb}</li>
-			<li>Чисел більших за 100 - ${moreHundredNumb}</li>
-		</ul>
-		`)
-	
+      document.write(`
+        <p>
+          Кількість парних чисел: ${oddNum}<br>
+          Кількість додатніх чисел: ${positiveNum}<br>
+          Кількість чисел більших за 100: ${bigNum}
+        </p>
+      `)
     </script>
   </body>
 </html>
