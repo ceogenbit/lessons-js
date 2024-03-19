@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 8</title>
+    <style>
+      a {
+        display: block;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+      }
+      img {
+        width: 100%;
+      }
+      h2 {
+        background-color: #141414;
+        margin: 0;
+        padding: 10px;
+        color: #fff;  
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Задача 8. Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо при кліку на зображення) тег img повинен знаходитись у середині тега a
+    </h1>
+    <script>
+      function createBanner(img, title, link) {
+        document.write(`<a href='${link}' target='_blank'>`)
+          document.write(`<img src='${img}'>`)
+          document.write(`<h2>${title}</h2>`)
+        document.write('</a>')
+      }
+      const bannerImg = '../../images/lesson-7/task-8/car.jpg'
+      const bannerTitle = 'Купи мене!'
+      const bannerLink = 'https://dimsweb.pl/'
+      createBanner(bannerImg, bannerTitle, bannerLink)
+    </script>
+  </body>
+</html>

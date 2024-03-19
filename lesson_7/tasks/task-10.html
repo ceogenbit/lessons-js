@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 10</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Задача 10.  Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для додатних показів температури.
+    </h1>
+    <script>
+      function calcAvarageValue(userNumTemp){
+        let positiveSumTemp = 0
+        let positiveTempQuantity = 0
+        for (let i = 1; i <= userNumQuantity; i++) {
+          let userTemp = parseFloat(prompt(`Введіть показник №${i}`))
+          if(userTemp > 0) {
+            positiveSumTemp += userTemp
+            positiveTempQuantity++
+          } 
+          else continue
+        }
+        return positiveSumTemp / positiveTempQuantity
+      }
+      let userNumQuantity = parseInt(prompt('Введіть кількість показників температури', '3'))
+      let result = calcAvarageValue(userNumQuantity)
+      document.write(`<p>Середнє значення додатних показів температури дорівнює ${result}</p>`)
+    </script>
+  </body>
+</html>
