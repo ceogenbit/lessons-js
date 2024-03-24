@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Задача 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається
+      ім’я «Іван».
+    </h1>
+    <script>
+      let namesStudent = []
+      let quantityIvan = 0
+      const userQuantityStudents = parseInt(
+        prompt('Введіть кількісь учнів', '3')
+      )
+      for (let i = 1; i <= userQuantityStudents; i++) {
+        const userNameStudents = prompt(
+          `Введіть ім'я ${i}-го учня`,
+          'Іван'
+        ).toLowerCase()
+        namesStudent.push(userNameStudents)
+        if (userNameStudents === 'іван' || userNameStudents === 'ivan')
+          quantityIvan++
+      }
+      document.write(`<p>Кількість учнів з іменем Іван: ${quantityIvan}</p>`)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Задача 3</title>
+  <style>
+    p {
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    Задача 1. Дано масив, який містить оцінки з К предметів. Знайти середній
+    бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник
+    (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є
+    хоча би одна трійка)).
+  </h1>
+  <script>
+    function getAverageRating(quantityLessons, averageValue) {
+      return (averageValue / quantityLessons).toFixed(2)
+    }
+    function arrFunc(arr) {
+      for (const item of arr) {
+        if (item === 5) console.log(`ohej ${item}`)
+      }
+    }
+    let arrGrade = []
+
+    let averageValue = 0
+    let userQuantityLessons = parseInt(
+      prompt('Введіть кількість предметів', '5')
+    )
+
+    for (let i = 1; i <= userQuantityLessons; i++) {
+      let gradeLessons = parseInt(prompt('Введіть оцінки', '10'))
+
+      arrGrade.push(gradeLessons)
+      averageValue += gradeLessons
+    }
+    console.log(getAverageRating(userQuantityLessons, averageValue))
+    let a = arrFunc(arrGrade)
+    console.log(a)
+  </script>
+</body>
+
+</html>

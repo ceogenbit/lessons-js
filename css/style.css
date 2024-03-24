@@ -1,154 +1,160 @@
 :root {
-    --hover: #0c2642;
-    --primary-text: #fff;
-    --accent-text: #ffed4f;
-    --background-item: rgba(20, 15, 68, 0.7);
+  --hover: #0c2642;
+  --primary-text: #fff;
+  --accent-text: #ffed4f;
+  --background-item: rgba(20, 15, 68, 0.7);
 }
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
-    min-width: 320px;
+  height: 100%;
+  min-width: 320px;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-ul, ol {
-    list-style: none;
-    padding: 0;
+ul,
+ol {
+  list-style: none;
+  padding: 0;
 }
 body {
-    font-family: "Amaranth", sans-serif;
-    color: var(--primary-text);
-    margin: 0;
+  font-family: "Amaranth", sans-serif;
+  color: var(--primary-text);
+  margin: 0;
 }
 body::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.73);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.73);
 }
 body::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: url('../images/index-background.webp') center / cover no-repeat;
-    z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("../images/index-background.webp") center / cover no-repeat;
+  z-index: -1;
 }
 .wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .wrapper main {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .container {
-    padding: 0 15px;
-    max-width: 1270px;
-    margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1270px;
+  margin: 0 auto;
 }
 .header {
-    text-align: center;
-    font-size: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #0d1214d8
+  text-align: center;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #0d1214d8;
 }
 .header--position {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 .header__title {
-    color: var(--accent-text);
+  color: var(--accent-text);
 }
 .header__name {
 }
 
 .page {
-    position: relative;
+  position: relative;
 }
 .page__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
 }
 .page__item {
-    flex: 1 1 410px;
-    display: flex;
-    justify-content: center;
-    background-color: var(--background-item);
-    min-height: 100px;
-    overflow: hidden;
+  flex: 1 1 410px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-item);
+  min-height: 100px;
+  overflow: hidden;
 }
 .page__link {
-    font-size: 33px;
-    flex: 1 1 auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    color: var(--primary-text);
-    position: relative;
+  font-size: 33px;
+  flex: 1 1 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: var(--primary-text);
+  position: relative;
 }
 .page__link::before {
-    content: '';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    align-self: center;
-    font-size: 17px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--hover);
-    transition: top 0.5s ease;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  align-self: center;
+  font-size: 17px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--hover);
+  transition: top 0.6s ease;
 }
 .page__link--lesson-2::before {
-    content: 'Урок №2. Вступ до веб-програмування. Вступ до JS. Лінійні алгоритми.';
+  content: "Урок №2. Вступ до веб-програмування. Вступ до JS. Лінійні алгоритми.";
 }
 .page__link--lesson-3::before {
-    content: 'Урок №3. Арифметичні і логічні вирази. Реалізація алгоритмів з розгалуженням';
+  content: "Урок №3. Арифметичні і логічні вирази. Реалізація алгоритмів з розгалуженням";
 }
 .page__link--lesson-5::before {
-    content: 'Урок №5. Цикли';
+  content: "Урок №5. Цикли";
 }
 .page__link--lesson-6::before {
-    content: 'Урок №6. Цикли. Практика';
+  content: "Урок №6. Цикли. Практика";
 }
 .page__link--lesson-7::before {
-    content: 'Урок №7. Функції';
+  content: "Урок №7. Функції";
+}
+.page__link--lesson-8::before {
+  content: "Урок №8. Функції - практика. Масиви - вступ";
 }
 .page__link span {
-    align-self: center;
+  align-self: center;
 }
 /* ============================================================================= */
-@media (any-hover:hover){
-    .page__item .page__link:hover::before {
-        top: 0;
-    }     
+@media (any-hover: hover) {
+  .page__link:hover::before {
+    top: 0;
+  }
 }
-@media (any-hover:none){
-    .page__item .page__link::before {
-        top: 0;
-    }     
+@media (any-hover: none) {
+  .page__link::before {
+    top: 0;
+  }
 }
-@media (max-width: 767.98px){
-    .header {
-        font-size: 30px;
-    }
+@media (max-width: 767.98px) {
+  .header {
+    font-size: 30px;
+  }
 }
