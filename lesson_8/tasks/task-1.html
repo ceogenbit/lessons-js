@@ -20,30 +20,53 @@
     хоча би одна трійка)).
   </h1>
   <script>
-    function getAverageRating(quantityLessons, averageValue) {
-      return (averageValue / quantityLessons).toFixed(2)
-    }
-    function arrFunc(arr) {
-      for (const item of arr) {
-        if (item === 5) console.log(`ohej ${item}`)
+    function getRandomArray(userValue) {
+      let array = []
+      const maxScore = 12
+      for (let i = 0; i < userValue; i++) {
+        let randomNum = 1 + Math.floor(Math.random() * maxScore)
+        array.push(randomNum)
       }
+      return array
     }
-    let arrGrade = []
 
-    let averageValue = 0
-    let userQuantityLessons = parseInt(
-      prompt('Введіть кількість предметів', '5')
-    )
-
-    for (let i = 1; i <= userQuantityLessons; i++) {
-      let gradeLessons = parseInt(prompt('Введіть оцінки', '10'))
-
-      arrGrade.push(gradeLessons)
-      averageValue += gradeLessons
+    function getAverageRating(arr) {
+      let sum = 0
+      let quantity = 0
+      arr.forEach(element => {
+        sum += element
+        quantity++
+      });
+      return sum / quantity
     }
-    console.log(getAverageRating(userQuantityLessons, averageValue))
-    let a = arrFunc(arrGrade)
-    console.log(a)
+
+    function getStudentCategory(arr) {
+      let twoScore = 0, threeScore = 0, mediumStatus = 0, goodStatus = 0, excelentStatus = 0, category = ''
+      for (let score of arr) {
+        if (score <= 2) twoScore++
+        if (score === 3) threeScore++
+        if (score > 3) mediumStatus++
+        if (score > 6) goodStatus++
+        if (score > 9) excelentStatus++
+      }
+      if (twoScore > 0) category = 'двійочник'
+      else if (threeScore > 0) category = 'трійочник'
+      else if (mediumStatus > 0 && mediumStatus > goodStatus) category = 'середній рівень'
+      else if (goodStatus > 0 && goodStatus > excelentStatus) category = 'хорошист'
+      else category = 'відмінник'
+      return category
+    }
+
+    const userAssessmenCount = parseInt(prompt('Введіть кількість предметів, щоб сформувати випадковий масив оцінок', '4'))
+    const studentGrades = getRandomArray(userAssessmenCount)
+    const arrSum = getAverageRating(studentGrades).toFixed(1)
+    let categoryStudent = getStudentCategory(studentGrades)
+    document.write(`
+      <p>
+        Масив сформовано, оцінки: ${studentGrades}<br>
+        Середній бал: ${arrSum} <br>
+        Category: ${categoryStudent}
+      </p>`)
   </script>
 </body>
 

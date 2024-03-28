@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      Задача 5. Дано послідовність оцінок учня. <br />
+      Підрахувати кількість: <br />
+      1. двійок <br />
+      2. кількість хороших оцінок (добре, відмінно); <br />
+      3. кількість оцінок, які нижче середнього.
+    </h1>
+    <script>
+      function getRandomArray(userValue) {
+        let array = []
+
+        const maxScore = 12
+        for (let i = 0; i < userValue; i++) {
+          let randomNum = 1 + Math.floor(Math.random() * maxScore)
+          array.push(randomNum)
+        }
+        return array
+      }
+      function get(params) {}
+
+      const userAssessmenCount = parseInt(
+        prompt(
+          'Введіть кількість предметів, щоб сформувати випадкову послідовність оцінок учня',
+          '10'
+        )
+      )
+      let studentScoresArray = getRandomArray(userAssessmenCount)
+      console.log(studentScoresArray)
+    </script>
+  </body>
+</html>
