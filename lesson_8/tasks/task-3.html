@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Задача 3</title>
-  <style>
-    p {
-      font-size: 24px;
-    }
-  </style>
-</head>
+  <body>
+    <h1>
+      Задача 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається
+      ім’я «Іван».
+    </h1>
+    <script>
+      function getNameQuantity(arr) {
+        let quantityIvan = 0
+        arr.forEach((name) => {
+          if (name === 'іван' || name === 'ivan') quantityIvan++
+        })
+        return quantityIvan
+      }
 
-<body>
-  <h1>
-    Задача 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається
-    ім’я «Іван».
-  </h1>
-  <script>
-    function getNameQuantity(arr) {
-      let quantityIvan = 0
-      arr.forEach(name => {
-        if (name === 'іван' || name === 'ivan') quantityIvan++
-      });
-      return quantityIvan
-    }
-
-    let namesStudent = []
-    const userQuantityStudents = parseInt(
-      prompt('Введіть кількісь учнів', '3')
-    )
-    for (let i = 1; i <= userQuantityStudents; i++) {
-      const userNameStudents = prompt(
-        `Введіть ім'я ${i}-го учня`,
-        'Іван'
-      ).toLowerCase()
-      namesStudent.push(userNameStudents)
-    }
-    let result = getNameQuantity(namesStudent)
-    document.write(`<p>Кількість учнів з іменем Іван: ${result}</p>`)
-  </script>
-</body>
-
+      let namesStudent = []
+      const userQuantityStudents = parseInt(
+        prompt('Введіть кількісь учнів', '3')
+      )
+      for (let i = 1; i <= userQuantityStudents; i++) {
+        const userNameStudents = prompt(
+          `Введіть ім'я ${i}-го учня`,
+          'Іван'
+        ).toLowerCase()
+        namesStudent.push(userNameStudents)
+      }
+      let result = getNameQuantity(namesStudent)
+      document.write(`<p>Кількість учнів з іменем Іван: ${result}</p>`)
+    </script>
+  </body>
 </html>
