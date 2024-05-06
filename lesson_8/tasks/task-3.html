@@ -10,12 +10,8 @@
       }
     </style>
   </head>
-
   <body>
-    <h1>
-      Задача 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається
-      ім’я «Іван».
-    </h1>
+    <h1>Задача 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».</h1>
     <script>
       function getNameQuantity(arr) {
         let quantityIvan = 0
@@ -26,18 +22,13 @@
       }
 
       let namesStudent = []
-      const userQuantityStudents = parseInt(
-        prompt('Введіть кількісь учнів', '3')
-      )
+      const userQuantityStudents = parseInt(prompt('Введіть кількісь учнів', '3'))
       for (let i = 1; i <= userQuantityStudents; i++) {
-        const userNameStudents = prompt(
-          `Введіть ім'я ${i}-го учня`,
-          'Іван'
-        ).toLowerCase()
+        const userNameStudents = prompt(`Введіть ім'я ${i}-го учня`, 'Іван').toLowerCase()
         namesStudent.push(userNameStudents)
       }
-      let result = getNameQuantity(namesStudent)
-      document.write(`<p>Кількість учнів з іменем Іван: ${result}</p>`)
+      let namesIvan = getNameQuantity(namesStudent)
+      document.write(`<p>Кількість учнів з іменем Іван: ${namesIvan}</p>`)
     </script>
   </body>
 </html>

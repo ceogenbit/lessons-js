@@ -22,7 +22,6 @@
     <script>
       function getRandomArray(userValue) {
         let array = []
-
         const maxScore = 12
         for (let i = 0; i < userValue; i++) {
           let randomNum = 1 + Math.floor(Math.random() * maxScore)
@@ -30,16 +29,66 @@
         }
         return array
       }
-      function get(params) {}
 
-      const userAssessmenCount = parseInt(
-        prompt(
-          'Введіть кількість предметів, щоб сформувати випадкову послідовність оцінок учня',
-          '10'
-        )
-      )
-      let studentScoresArray = getRandomArray(userAssessmenCount)
-      console.log(studentScoresArray)
+      function getNumberOfDeuces(arr) {
+        let numberOfDeuces = 0
+        arr.forEach((score) => {
+          switch (score) {
+            case 2:
+              numberOfDeuces++
+              break
+          }
+        })
+        return numberOfDeuces
+      }
+
+      function getScoreIsBelowAverage(arr) {
+        let scoreIsBelowAverage = 0
+        arr.forEach((score) => {
+          switch (score) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+              scoreIsBelowAverage++
+              break
+          }
+        })
+        return scoreIsBelowAverage
+      }
+
+      function getExcelentScores(arr) {
+        let excelentScores = 0
+        arr.forEach((score) => {
+          switch (score) {
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+              excelentScores++
+              break
+          }
+        })
+        return excelentScores
+      }
+
+      const userAssessmenCount = parseInt(prompt('Введіть кількість предметів, щоб сформувати випадкову послідовність оцінок учня', '8'))
+      const studentScoresArray = getRandomArray(userAssessmenCount)
+
+      const scoreIsBelowAverage = getScoreIsBelowAverage(studentScoresArray)
+      const numberOfDeuces = getNumberOfDeuces(studentScoresArray)
+      const excelentScores = getExcelentScores(studentScoresArray)
+      document.write(`
+      <p>
+        Оцінки: ${studentScoresArray} <br>
+        кількість двійок: ${numberOfDeuces} <br>
+        кількість оцінок, які нижче середнього: ${scoreIsBelowAverage} <br>
+        кількість хороших оцінок (добре, відмінно): ${excelentScores}
+      </p>`)
     </script>
   </body>
 </html>
